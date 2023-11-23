@@ -1,1 +1,24 @@
-<p>list-resto works!</p>
+<h2>List Of Restaurant</h2>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">SNo.</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Address</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of collections; index as i">
+        <th scope="row">{{i+1}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.address}}</td>
+        <td>
+          <a routerLink="/update/{{item.id}}" title="Edit"><i class="fa-solid fa-pen-to-square fa-lg text-primary"></i></a>
+          <a (click)="deleteResto(item.id)" title="Delete"><i class="fa-solid fa-trash-can fa-lg text-danger p-3"></i></a>
+        </td>
+      </tr>
+    </tbody>
+</table>

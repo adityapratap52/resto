@@ -12,12 +12,8 @@ const routes: Routes = [
     component: AddRestoComponent
   },
   {
-    path:"update",
+    path:"update/:id",
     component: UpdateRestoComponent
-  },
-  {
-    path:"list",
-    component: ListRestoComponent
   },
   {
     path:"login",
@@ -26,6 +22,10 @@ const routes: Routes = [
   {
     path:"register",
     component: RegisterComponent
+  },
+  {
+    path:"",
+    component: ListRestoComponent
   },
 ];
 
