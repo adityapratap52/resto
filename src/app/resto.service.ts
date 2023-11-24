@@ -6,6 +6,7 @@ import {HttpClient} from '@angular/common/http'
 })
 export class RestoService {
 
+  rootUrl = "http://localhost:3000";
   url = "http://localhost:3000/restaurant";
 
   constructor(
@@ -30,5 +31,9 @@ export class RestoService {
 
   editResto(data:any, id:any) {
     return this._http.put(this.url+"/"+id,data);
+  }
+
+  register(data:any) {
+    return this._http.post(this.rootUrl+"/users", data);
   }
 }
